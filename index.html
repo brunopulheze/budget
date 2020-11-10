@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script async src="main.js"></script>
+    <title>Budget</title>
+</head>
+
+<body>
+
+    <main>
+
+        <section id="image"></section>
+
+        <section class="container">
+            <section id="column">
+                <form onsubmit="addToTable(event)">
+
+                    <fieldset>
+                        <legend>Budget</legend>
+
+                        <section class="form1">
+                            <div>
+                                                            <label for="amount">Amount</label>
+                            
+                                <input type="number" name="amount" id="amount">
+                            
+                            <select name="currency" id="cur">
+                                <option value="eur">EUR</option>
+                                <option value="usd">USD</option>
+                                <option value="gbp">GBP</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="date">Date</label>
+                            
+                                <input type="date" name="date" id="date">
+                            </div>
+                        </section>
+
+                        <section class="form2">
+                            <div>
+                            <textarea name="exp" id="exp" placeholder="Explanation"></textarea>
+                        </div>
+                        </section>
+
+                        <section class="form3">
+                            <div>
+                                <label for="source">Type</label>
+                                <input type="radio" name="outcome" id="outcome">
+                                <label for="outcome">Outcome</label>
+    
+                                <input type="radio" name="income" id="income">
+                                <label for="income">Income</label>
+    
+                                <label for="self">For</label>
+                                <label for="self">Self</label>
+                                <input type="checkbox" name="self" id="myself">
+    
+                                <label for="family">Family</label>
+                                <input type="checkbox" name="family" id="family">
+    
+                                <label for="friend">Friend</label>
+                                <input type="checkbox" name="friend" id="friend">
+                            </div>
+                        </section>
+                        <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                    </fieldset>
+                </form>
+
+                <section class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Explanation</th>
+                                <th>Type</th>
+                                <th>For</th>
+                            </tr>
+                        </thead>
+                        <tbody id=data>
+                        </tbody>
+                    </table>
+                </section>
+
+            </section>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
